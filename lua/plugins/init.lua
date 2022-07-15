@@ -53,6 +53,15 @@ local plugins = {
     end,
   },
 
+  -- indent blankline
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    events = { "BufRead", "BufWinEnter", "BufNewFile" },
+    config = function()
+      require("ui.indent_blankline")
+    end,
+  },
+
   -- colorscheme
   {
     "folke/tokyonight.nvim",
