@@ -34,6 +34,14 @@ local plugins = {
     after = "cmp-buffer",
   },
   
+  -- which-key
+  {
+    "folke/which-key.nvim",
+    config = function()
+      require("plugins.whichkey")
+    end,
+  },
+
   -- colorscheme
   {
     "folke/tokyonight.nvim",

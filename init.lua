@@ -4,4 +4,5 @@ require("core.settings")
 require("core.plugin-manager").bootstrap()
 require("plugins")
 
+require("core.mappings")
 require("core.colorscheme")
