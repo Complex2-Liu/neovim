@@ -28,6 +28,12 @@ M.general = {
     -- keep your mouse centered when searching
     ["n"] = { "nzzzv", "next search item" },
     ["N"] = { "Nzzzv", "prev search item" },
+
+    -- quickfix list and location list
+    ["[q"] = { "<cmd> cprev <cr>", "quickfix previous item" },
+    ["]q"] = { "<cmd> cnext <cr>", "quickfix next item" },
+    ["[l"] = { "<cmd> lprev <cr>", "location list previous item" },
+    ["]l"] = { "<cmd> lnext <cr>", "location list next item" },
   },
 
   i = {
@@ -55,6 +61,97 @@ M.general = {
 
     -- period command
     ["."] = { ":normal .<cr>", "perform period commands over selected region" },
+  },
+}
+
+M.lspconfig = {
+  n = {
+    ["gD"] = {
+      function() vim.lsp.buf.declaration() end,
+      "   lsp declaration",
+    },
+
+    ["gd"] = {
+      function() vim.lsp.buf.definition() end,
+      "   lsp definition",
+    },
+
+    ["K"] = {
+      function() vim.lsp.buf.hover() end,
+      "   lsp hover",
+    },
+
+    ["gi"] = {
+      function() vim.lsp.buf.implementation() end,
+      "   lsp implementation",
+    },
+
+    ["gr"] = {
+      function() vim.lsp.buf.references() end,
+      "   lsp references",
+    },
+
+    ["<Leader>ls"] = {
+      function() vim.lsp.buf.signature_help() end,
+      "   lsp signature_help",
+    },
+
+    ["<Leader>D"] = {
+      function() vim.lsp.buf.type_definition() end,
+      "   lsp type definition",
+    },
+
+    ["<Leader>rn"] = {
+      function() vim.lsp.buf.rename() end,
+      "   lsp rename all references",
+    },
+
+    ["<Leader>fm"] = {
+      function() vim.lsp.buf.formatting() end,
+      "   lsp formatting",
+    },
+
+    ["<Leader>ca"] = {
+      function() vim.lsp.buf.code_action() end,
+      "   lsp code_action",
+    },
+
+    ["<Leader>w"] = { name = "lsp workspace commands" },
+    ["<Leader>wa"] = {
+      function() vim.lsp.buf.add_workspace_folder() end,
+      "   add workspace folder",
+    },
+
+    ["<Leader>wr"] = {
+      function() vim.lsp.buf.remove_workspace_folder() end,
+      "   remove workspace folder",
+    },
+
+    ["<Leader>wl"] = {
+      function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
+      "   list workspace folders",
+    },
+
+    -- diagnostic
+    ["[d"] = {
+      function() vim.diagnostic.goto_prev() end,
+      "   goto prev",
+    },
+
+    ["]d"] = {
+      function() vim.diagnostic.goto_next() end,
+      "   goto next",
+    },
+
+    ["<Leader>e"] = {
+      function() vim.diagnostic.open_float() end,
+      "   floating diagnostic",
+    },
+
+    ["<Leader>q"] = {
+      function() vim.diagnostic.setloclist() end,
+      "   diagnostic setloclist",
+    },
   },
 }
 

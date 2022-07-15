@@ -15,15 +15,19 @@ local plugins = {
   { "hrsh7th/cmp-nvim-lsp" },
   {
     "rafamadriz/friendly-snippets",
-    event = "InsertEnter",  -- load this plugin just before starting Insert mode
+    event = "InsertEnter", -- load this plugin just before starting Insert mode
   },
   {
     "saadparwaiz1/cmp_luasnip",
     after = "friendly-snippets",
   },
   {
-    "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
     after = "cmp_luasnip",
+  },
+  {
+    "hrsh7th/cmp-nvim-lua",
+    after = "cmp-nvim-lsp-signature-help",
   },
   {
     "hrsh7th/cmp-buffer",
@@ -33,7 +37,22 @@ local plugins = {
     "hrsh7th/cmp-path",
     after = "cmp-buffer",
   },
-  
+
+  -- Lsp stuff
+  {
+    "williamboman/nvim-lsp-installer",
+    config = function()
+      require("plugins.lsp_installer")
+    end,
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("plugins.lspconfig")
+    end,
+  },
+
   -- treesitter
   {
     "nvim-treesitter/nvim-treesitter",
