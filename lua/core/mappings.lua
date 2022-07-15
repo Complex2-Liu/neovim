@@ -58,6 +58,22 @@ M.general = {
   },
 }
 
+M.treesitter = {
+  n = {
+    ["<Leader>ts"] = { name = "treesitter related commands" },
+
+    ["<Leader>tsp"] = {
+      "<cmd> TSPlaygroundToggle <cr>",
+      "toggle treesitter playground"
+    },
+
+    ["<Leader>tsh"] = {
+      "<cmd> TSHighlightCapturesUnderCursor <cr>",
+      "show treesitter and syntax highlight groups under the cursor",
+    },
+  },
+}
+
 local set_keymaps = require("core.utils").set_keymaps
 
 -- Load all mappings

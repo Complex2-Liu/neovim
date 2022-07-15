@@ -34,6 +34,17 @@ local plugins = {
     after = "cmp-buffer",
   },
   
+  -- treesitter
+  {
+    "nvim-treesitter/nvim-treesitter",
+    events = { "BufRead", "BufWinEnter", "BufNewFile" },
+    run = ":TSUpdate",
+    config = function()
+      require("plugins.treesitter")
+    end
+  },
+  { "nvim-treesitter/playground" },
+
   -- which-key
   {
     "folke/which-key.nvim",
