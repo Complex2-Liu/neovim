@@ -1,7 +1,7 @@
 require("core.settings")
 
 -- Load plugins
-require("core.plugin-manager").bootstrap()
+require("core.plugin_manager").bootstrap()
 require("plugins")
 
 require("core.mappings")

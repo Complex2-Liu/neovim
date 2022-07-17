@@ -97,4 +97,4 @@ local plugins = {
   },
 }
 
-require("core.plugin-manager").load_plugins(plugins)
+require("core.plugin_manager").load_plugins(plugins)
