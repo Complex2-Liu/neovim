@@ -53,6 +53,15 @@ local plugins = {
     end,
   },
 
+  -- file explorer
+  {
+    "kyazdani42/nvim-tree.lua",
+    config = function()
+      require("ui.file_explorer")
+    end,
+  },
+  { "kyazdani42/nvim-web-devicons" },
+
   -- treesitter
   {
     "nvim-treesitter/nvim-treesitter",

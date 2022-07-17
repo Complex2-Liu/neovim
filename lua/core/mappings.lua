@@ -171,6 +171,13 @@ M.treesitter = {
   },
 }
 
+M.file_explorer = {
+  n = {
+    ["<F1>"] = { "<cmd> NvimTreeFocus <cr>", "   focus file explorer" },
+    ["<F2>"] = { "<cmd> NvimTreeToggle <cr>", "   toggle file explorer" },
+  },
+}
+
 local set_keymaps = require("core.utils").set_keymaps
 
 -- Load all mappings
