@@ -8,6 +8,9 @@ local options = {
   filters = {
     dotfiles = true, -- do not show dotfiles
   },
+  git = {
+    enable = false,
+  },
 
   disable_netrw = true,
   hijack_netrw = true,
@@ -17,6 +20,8 @@ local options = {
   },
 
   view = {
+    hide_root_folder = true,
+
     mappings = {
       custom_only = true, -- will use only the provided user mappings and not the default
 
