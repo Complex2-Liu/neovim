@@ -10,6 +10,9 @@ local options = {
   scrolloff = 8,
   sidescrolloff = 8,
 
+  -- The value of this option influences when the last window will have a status line
+  -- 3: always and ONLY the last window (required nvim >= 0.7)
+  laststatus = 3,
 
   -- replace <Tab> by appropriate number of spaces
   -- To insert a real <Tab>, use <CTRL-V> + <Tab>

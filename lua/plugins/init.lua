@@ -81,6 +81,15 @@ local plugins = {
     end,
   },
 
+  {
+    "nvim-lualine/lualine.nvim",
+    events = { "BufRead", "BufWinEnter", "BUfNewFile" },
+    config = function()
+      require("ui.statusline")
+    end
+  },
+
+
   -- indent blankline
   {
     "lukas-reineke/indent-blankline.nvim",
