@@ -12,8 +12,9 @@ end
 
 local servers = {
   "clangd",
-  "texlab",
   "sumneko_lua",
+  "texlab",
+  "ltex",
 }
 
 local on_attach = function(client, bufnr)
