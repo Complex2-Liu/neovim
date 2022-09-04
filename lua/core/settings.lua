@@ -5,6 +5,7 @@ local options = {
 
   mouse = "a",  -- enable mouse support for all mode
   cursorline = true, -- highlight the current line
+  showmode = false, -- disable showing mode status
 
   -- Minimal number of screen lines to keep above and below the cursor
   scrolloff = 8,
