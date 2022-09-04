@@ -9,6 +9,10 @@ end
 local options = {
   ensure_installed = {
     "lua",
+    "c",
+    "markdown",
+    "markdown_inline",
+    "latex",
     "query",
   },
 
@@ -18,6 +22,8 @@ local options = {
     enable = true,
     -- disable the module for some languages in the list below
     disable = { "cpp" },
+
+    additional_vim_regex_highlighting = true,
   },
 
   indent = {
